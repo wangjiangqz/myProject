@@ -64,7 +64,7 @@
 			<label class="control-label">生成包路径:</label>
 			<div class="controls">
 				<form:input path="packageName" htmlEscape="false" maxlength="500" class="required form-control"/>
-				<span class="help-inline">建议模块包：com.lw.modules</span>
+				<span class="help-inline">建议模块包：com.base.modules</span>
 			</div>
 		</div>
 		<div class="form-group">

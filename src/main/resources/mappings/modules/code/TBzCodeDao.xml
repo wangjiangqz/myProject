@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lw.modules.code.dao.TBzCodeDao">
+<mapper namespace="com.base.modules.code.dao.TBzCodeDao">
     
 	<sql id="tBzCodeColumns">
 		a.column1 AS "column1",
@@ -80,7 +80,7 @@
 		</choose>
 	</select>
 
-	<select id="executeSql" resultType="com.lw.modules.code.entity.OwnMap" parameterType="com.lw.modules.code.entity.OwnMap">
+	<select id="executeSql" resultType="com.base.modules.code.entity.OwnMap" parameterType="com.base.modules.code.entity.OwnMap">
 		${sql}
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">

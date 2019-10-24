@@ -41,12 +41,12 @@
 	
 	<!-- 类型别名 -->
 	<typeAliases>
-		<typeAlias alias="Page" type="com.lw.common.persistence.Page" /><!--分页  -->
+		<typeAlias alias="Page" type="com.base.common.persistence.Page" /><!--分页  -->
 	</typeAliases>
 	
 	<!-- 插件配置 -->
 	<plugins>
-		<plugin interceptor="com.lw.common.persistence.interceptor.PaginationInterceptor" />
+		<plugin interceptor="com.base.common.persistence.interceptor.PaginationInterceptor" />
     </plugins>
 	
 </configuration>

@@ -9,7 +9,7 @@
     <param-value>classpath*:/spring-context*.xml</param-value>
   </context-param>
   <listener>
-    <listener-class>com.lw.modules.sys.listener.WebContextListener</listener-class>
+    <listener-class>com.base.modules.sys.listener.WebContextListener</listener-class>
   </listener>
   <listener>
     <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
@@ -82,7 +82,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>CKFinderConnectorServlet</servlet-name>
-    <servlet-class>com.lw.common.web.CKFinderConnectorServlet</servlet-class>
+    <servlet-class>com.base.common.web.CKFinderConnectorServlet</servlet-class>
     <init-param>
       <param-name>XMLConfig</param-name>
       <param-value>/WEB-INF/ckfinder.xml</param-value>
@@ -93,7 +93,7 @@
     </init-param>
     <init-param>
       <param-name>configuration</param-name>
-      <param-value>com.lw.common.web.CKFinderConfig</param-value>
+      <param-value>com.base.common.web.CKFinderConfig</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -119,7 +119,7 @@
   </filter-mapping>
   <servlet>
     <servlet-name>UserfilesDownloadServlet</servlet-name>
-    <servlet-class>com.lw.common.servlet.UserfilesDownloadServlet</servlet-class>
+    <servlet-class>com.base.common.servlet.UserfilesDownloadServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UserfilesDownloadServlet</servlet-name>
@@ -127,7 +127,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>ValidateCodeServlet</servlet-name>
-    <servlet-class>com.lw.common.servlet.ValidateCodeServlet</servlet-class>
+    <servlet-class>com.base.common.servlet.ValidateCodeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ValidateCodeServlet</servlet-name>
@@ -135,7 +135,7 @@
   </servlet-mapping>
  <servlet>
    <servlet-name>CutImageServlet</servlet-name>
-   <servlet-class>com.lw.common.servlet.CutImageServlet</servlet-class>
+   <servlet-class>com.base.common.servlet.CutImageServlet</servlet-class>
  </servlet>
  <servlet-mapping>
    <servlet-name>CutImageServlet</servlet-name>

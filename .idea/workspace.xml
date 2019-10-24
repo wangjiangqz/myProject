@@ -2,7 +2,622 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="0e8e6e2c-2f28-4bf4-84c1-5c7276bb37c2" name="Default" comment="master">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/beanvalidator/BeanValidators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/config/Global.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaLogoutResp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaReportResp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAActiveTestResp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTALogout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/CodeCheckServiceService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/OrgInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/QueryCondition.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/SearchKEY.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/axis2/CodeCheckAxis2Service.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/package-info.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/BaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/Page.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/Parameter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/TreeEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/Dialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/DerbyDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/MySQLDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/SybaseDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/session/JedisSessionDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/session/SessionManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/treelist/SupTreeList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/treelist/cols/SupCol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/common/properties/Background.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/treelist/cols/Col.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/tool/Tool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/CacheUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/IdcardUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/UploadUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/ZxingHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/fieldtype/OfficeType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/xstream/DateTimeConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaFieldDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaFileDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaRegisteredDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaSonPublicBeanDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaTableFieldDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/CgAutoListConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaAtt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaCalendar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaRegistered.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaAttService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaRegisteredService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaTableConfigService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaFileController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaMainSqlController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaPublicBeanController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaRegisteredController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/ArticleDataDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/CategoryDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/CommentDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/GuestbookDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/FileTpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/CommentService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/LinkService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/utils/CmsUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/TemplateController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/front/FrontGuestbookController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/code/web/TBzCodeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/company/service/TBzCompanyPersonnelService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/entity/Demo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/entity/TBzExpertExcelDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/CutImageDemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/QqPopupDemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/TBzExpertExcelDemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/UploadFileDemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/dao/GenTableColumnDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/service/GenTemplateService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/util/GenUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/MenuDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Area.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/interceptor/LogInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/security/SystemAuthorizingRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/security/UsernamePasswordToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/DbConnection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/LogUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/MenuController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/picConfigController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaActivityDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaNoteDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaTaskDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaTempActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBzRolePriority.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/TBaActivityService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/TBaNoteService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/web/TBaTempActivityController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/beanvalidator/BeanValidators.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/config/Global.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaLogoutResp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaReportResp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAActiveTestResp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTALogout.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/CodeCheckServiceService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/OrgInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/QueryCondition.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/SearchKEY.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/CodeCheckAxis2Service.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/BaseDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/Page.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/Parameter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/TreeEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/Dialect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/DerbyDialect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/MySQLDialect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/SybaseDialect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/session/JedisSessionDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/session/SessionManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/treelist/SupTreeList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/treelist/cols/SupCol.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/common/properties/Background.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/treelist/cols/Col.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/tool/Tool.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/CacheUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/IdcardUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/UploadUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/ZxingHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/fieldtype/OfficeType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/xstream/DateTimeConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaFieldDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaFileDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaRegisteredDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaSonPublicBeanDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaTableFieldDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/CgAutoListConstant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaAtt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaCalendar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaRegistered.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaAttService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaRegisteredService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaTableConfigService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaFileController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaMainSqlController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaPublicBeanController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaRegisteredController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/ArticleDataDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/CategoryDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/CommentDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/GuestbookDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/FileTpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/CommentService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/LinkService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/utils/CmsUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/TemplateController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/front/FrontGuestbookController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/code/web/TBzCodeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/company/service/TBzCompanyPersonnelService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/entity/Demo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/entity/TBzExpertExcelDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/CutImageDemoController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/QqPopupDemoController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/TBzExpertExcelDemoController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/UploadFileDemoController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/dao/GenTableColumnDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/service/GenTemplateService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/util/GenUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/MenuDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Area.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/interceptor/LogInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/security/SystemAuthorizingRealm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/security/UsernamePasswordToken.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/DbConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/LogUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/MenuController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/UserController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/picConfigController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaActivityDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaNoteDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaTaskDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaTempActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBzRolePriority.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/TBaActivityService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/TBaNoteService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/web/TBaTempActivityController.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/annotation/FieldName.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/annotation/FieldName.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/beanvalidator/AddGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/beanvalidator/AddGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/beanvalidator/DefaultGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/beanvalidator/DefaultGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/beanvalidator/EditGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/beanvalidator/EditGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/common/MD5.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/common/MD5.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/common/MmsMakeDemo.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/common/MmsMakeDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ctcserver/sms/CqBSMSCallback.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ctcserver/sms/CqBSMSCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ctcserver/sms/SendSmsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ctcserver/sms/SendSmsClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ctcserver/sms/SendSmsTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ctcserver/sms/SendSmsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/encry/Coder.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/encry/Coder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/encry/des3/Encry_DES3CLt.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/encry/des3/Encry_DES3CLt.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/http/ReceiveSMS.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/http/ReceiveSMS.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/http/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/http/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/http/TestDes3.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/http/TestDes3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/http/TestDes3Byte.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/http/TestDes3Byte.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/EAMSCallback.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/EAMSCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/EaCtcppChannel.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/EaCtcppChannel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/SendSmsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/SendSmsClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/SendSmsTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/SendSmsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/DeliverMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/DeliverMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaActiveTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaActiveTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaActiveTestResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaActiveTestResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaConstants.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaCtcpp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaCtcpp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaDeliver.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaDeliver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaDeliverResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaDeliverResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaHead.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaHead.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaLogin.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaLogin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaLoginResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaLoginResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaLogout.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaLogout.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaReport.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaReport.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaSubmit.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaSubmit.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/EaSubmitResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/EaSubmitResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/ReportMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/ReportMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/message/SubmitMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/message/SubmitMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/ISmsOperatorEa.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/ISmsOperatorEa.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/MyTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/MyTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/SmsOperatorEaImpService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/SmsOperatorEaImpService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/SmsOperatorEaImpServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/SmsOperatorEaImpServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/SmsOperatorEaImpServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/SmsOperatorEaImpServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/TestDes3.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/TestDes3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/notify/ISmsEaOperatorNotify.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/notify/ISmsEaOperatorNotify.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/http/sms/GetSmsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/http/sms/GetSmsClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/http/sms/SendSmsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/http/sms/SendSmsClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/http/sms/getSmsStateClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/http/sms/getSmsStateClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/IMmsOperator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/IMmsOperator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/MmsFileGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/MmsFileGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/MmsOperatorImpService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/MmsOperatorImpService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/MmsOperatorImpServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/MmsOperatorImpServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/MmsOperatorImpServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/MmsOperatorImpServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/mms/MmsTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/mms/MmsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/BalanceRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/BalanceRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/ISmsOperator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/ISmsOperator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/MoMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/MoMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/MoMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/MoMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/MtMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/MtMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/MtMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/MtMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/MtMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/MtMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/ReportMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/ReportMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/ReportMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/ReportMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/SmsOperatorImpService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/SmsOperatorImpService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/SmsOperatorImpServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/SmsOperatorImpServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/SmsOperatorImpServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/SmsOperatorImpServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/ContactsService4JSONImplServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/IContactsService4JSON.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/IContactsService4JSON.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/IContactsService4JSONProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/IContactsService4JSONProxy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/contacts/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/contacts/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/sendCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/sendCode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/BalanceRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/BalanceRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/ISmsOperatorInter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/ISmsOperatorInter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/MoMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/MoMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/MoMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/MoMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/MtMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/MtMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/MtMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/MtMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/MtMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/MtMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/ReportMessageRes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/ReportMessageRes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/ReportMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/ReportMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/SmsOperatorImpInterService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/SmsOperatorImpInterService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/SmsOperatorImpInterServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/SmsOperatorImpInterServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/SmsOperatorImpInterServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/SmsOperatorImpInterServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsinter/TestInterf.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsinter/TestInterf.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsnotify/ISmsOperatorNotify.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsnotify/ISmsOperatorNotify.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsnotify/MoMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsnotify/MoMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsnotify/ReportMessageResDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsnotify/ReportMessageResDetail.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/smsnotify/SmsOperatorNotifyImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/smsnotify/SmsOperatorNotifyImp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/SendSmsClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/SendSmsClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/DeliverMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/DeliverMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAActiveTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAActiveTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTACallback.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTACallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTADeliver.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTADeliver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTADeliverResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTADeliverResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAHead.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAHead.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTALogin.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTALogin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTALoginResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTALoginResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTALogoutResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTALogoutResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAQuery.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAQueryResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAQueryResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTASubmit.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTASubmit.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTASubmitResp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTASubmitResp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/OTAppChannel.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/OTAppChannel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/ReportMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/ReportMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/otasocket/message/SubmitMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/otasocket/message/SubmitMsg.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/sso/nbtravel/CreateUserImpService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/sso/nbtravel/CreateUserImpService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/sso/nbtravel/CreateUserImpServiceLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/sso/nbtravel/CreateUserImpServiceLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/sso/nbtravel/CreateUserImpServiceSoapBindingStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/sso/nbtravel/CreateUserImpServiceSoapBindingStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/sso/nbtravel/ICreateUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/sso/nbtravel/ICreateUser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/ema/sso/nbtravel/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/ema/sso/nbtravel/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/filter/PageCachingFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/filter/PageCachingFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/mapper/BeanMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/mapper/BeanMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/mapper/JaxbMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/mapper/JaxbMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/mapper/JsonMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/mapper/JsonMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/mapper/adapters/MapAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/mapper/adapters/MapAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/mapper/adapters/MapConvertor.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/mapper/adapters/MapConvertor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/Arithmetic.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/Arithmetic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/CodeCheckService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/CodeCheckService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/CodeCheckServiceDelegate.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/CodeCheckServiceDelegate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/ObjectFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/PostOrgInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/PostOrgInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/PostOrgInfoResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/PostOrgInfoResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/QueryResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/QueryResult.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/SearchDMInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/SearchDMInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/SearchDMInfoResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/SearchDMInfoResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/SearchKEYResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/SearchKEYResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/CheckCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/axis2/CheckCode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/CodeCheckServiceServiceStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/orgcode/axis2/CodeCheckServiceServiceStub.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/BaseEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/CrudDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/CrudDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/DataEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/DataEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/MapperLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/MapperLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/TreeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/TreeDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/annotation/MyBatisDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/annotation/MyBatisDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/DB2Dialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/DB2Dialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/H2Dialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/H2Dialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/HSQLDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/HSQLDialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/OracleDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/OracleDialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/PostgreSQLDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/PostgreSQLDialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/SQLServer2005Dialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/SQLServer2005Dialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/dialect/db/SQLServerDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/dialect/db/SQLServerDialect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/interceptor/BaseInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/interceptor/BaseInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/interceptor/PaginationInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/interceptor/PaginationInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/interceptor/PreparePaginationInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/interceptor/PreparePaginationInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/interceptor/SQLHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/interceptor/SQLHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/proxy/PageConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/proxy/PageConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/proxy/PaginationMapperMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/proxy/PaginationMapperMethod.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/proxy/PaginationMapperProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/proxy/PaginationMapperProxy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/persistence/proxy/PaginationMapperRegistry.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/persistence/proxy/PaginationMapperRegistry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/Cryptos.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/Cryptos.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/Digests.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/Digests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/HasAnyPermissionsTag.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/HasAnyPermissionsTag.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/cache/JedisCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/cache/JedisCacheManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/cache/SessionCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/cache/SessionCacheManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/session/CacheSessionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/session/CacheSessionDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/security/shiro/session/SessionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/security/shiro/session/SessionDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/service/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/service/BaseService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/service/CrudService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/service/CrudService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/service/ServiceException.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/service/ServiceException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/service/TreeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/service/TreeService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/servlet/CutImageServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/servlet/CutImageServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/servlet/UserfilesDownloadServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/servlet/UserfilesDownloadServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/servlet/ValidateCodeServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/servlet/ValidateCodeServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/httpclient/HttpProtocolHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/httpclient/HttpProtocolHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/httpclient/HttpRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/httpclient/HttpRequest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/httpclient/HttpResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/httpclient/HttpResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/httpclient/HttpResultType.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/httpclient/HttpResultType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/utils/C123SendSmsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/utils/C123SendSmsUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/sms/cm/utils/CommonSmsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/sms/cm/utils/CommonSmsUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/SupcanController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/SupcanController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/common/fonts/SupFont.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/common/fonts/SupFont.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/common/properties/SupBackground.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/common/properties/SupBackground.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/common/properties/SupExpress.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/common/properties/SupExpress.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/common/properties/SupProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/common/properties/SupProperties.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/annotation/treelist/cols/SupGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/annotation/treelist/cols/SupGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/common/Common.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/common/Common.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/common/fonts/Font.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/common/fonts/Font.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/common/properties/Express.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/common/properties/Express.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/common/properties/Properties.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/common/properties/Properties.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/freeform/FreeForm.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/freeform/FreeForm.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/treelist/TreeList.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/treelist/TreeList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/supcan/treelist/cols/Group.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/supcan/treelist/cols/Group.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/test/SpringTransactionalContextTests.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/test/SpringTransactionalContextTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/Collections3.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/Collections3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/CookieUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/CookieUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/DateUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/Encodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/Encodes.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/Exceptions.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/Exceptions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FTPUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FTPUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FileDownUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FileDownUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FileSizeHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FileSizeHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FileUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FreeMarkers.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FreeMarkers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/FreemarkerHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/FreemarkerHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/IdGen.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/IdGen.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/IdGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/IdGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/ImageGeo.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/ImageGeo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/ImagesUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/ImagesUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/JedisUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/JedisUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/MacUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/MacUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/MobileSendMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/MobileSendMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/ObjectUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/ObjectUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/OrderProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/OrderProperties.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/PropertiesLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/PropertiesLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/Reflections.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/Reflections.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/SendMailUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/SendMailUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/SpringContextHolder.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/SpringContextHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/StreamUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/StreamUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/StringUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/StringUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/SystemPath.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/SystemPath.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/Threads.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/Threads.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/TimeUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/TimeUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/UserAgentUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/UserAgentUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/WorkDayUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/WorkDayUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/ExcelUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/ExcelUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/ExportExcel.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/ExportExcel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/ImportExcel.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/ImportExcel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/annotation/ExcelField.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/annotation/ExcelField.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/fieldtype/AreaType.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/fieldtype/AreaType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/utils/excel/fieldtype/RoleListType.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/utils/excel/fieldtype/RoleListType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/web/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/web/BaseController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/web/CKFinderConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/web/CKFinderConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/web/CKFinderConnectorServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/web/CKFinderConnectorServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/common/web/Servlets.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/common/web/Servlets.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/DictEntityDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/DictEntityDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaAttDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaAttDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaCalendarDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaCalendarDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaMainSqlDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaMainSqlDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaParameterDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaParameterDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaPublicBeanDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaPublicBeanDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaTableConfigDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaTableConfigDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/DictEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/DictEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaCalendarDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaCalendarDay.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaField.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaField.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaFile.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaFile.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaMainSql.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaMainSql.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaParameter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaParameter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaPublicBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaPublicBean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaSonPublicBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaSonPublicBean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaTableConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaTableConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaTableField.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaTableField.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/DictEntityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/DictEntityService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaCalendarService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaCalendarService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaFileService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaFileService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaMainSqlService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaMainSqlService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaParameterService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaParameterService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaPublicBeanService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaPublicBeanService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/service/TBaSonPublicBeanService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/service/TBaSonPublicBeanService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaAttController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaAttController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaCalendarController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaCalendarController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaParameterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaParameterController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/TBaTableConfigController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/TBaTableConfigController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/ThirdPartyLoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/ThirdPartyLoginController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/base/web/autolist.ftl" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/base/web/autolist.ftl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/ArticleDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/ArticleDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/LinkDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/LinkDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/dao/SiteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/dao/SiteDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Article.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/ArticleData.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/ArticleData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Category.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Comment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Guestbook.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Guestbook.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Link.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Link.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/entity/Site.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/entity/Site.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/ArticleDataService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/ArticleDataService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/ArticleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/CategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/CategoryService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/FileTplService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/FileTplService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/GuestbookService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/GuestbookService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/SiteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/SiteService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/service/StatsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/service/StatsService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/utils/TplUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/utils/TplUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/utils/WiexinSignUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/utils/WiexinSignUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/ArticleController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/CategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/CategoryController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/CmsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/CmsController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/CommentController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/GuestbookController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/GuestbookController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/LinkController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/LinkController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/SiteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/SiteController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/StatsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/StatsController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/front/FrontController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/front/FrontController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/front/FrontSearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/front/FrontSearchController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/cms/web/front/WeixinController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/cms/web/front/WeixinController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/code/dao/TBzCodeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/code/dao/TBzCodeDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/code/entity/OwnMap.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/code/entity/OwnMap.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/code/entity/TBzCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/code/entity/TBzCode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/code/service/TBzCodeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/code/service/TBzCodeService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/company/dao/TBzCompanyPersonnelDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/company/dao/TBzCompanyPersonnelDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/company/entity/TBzCompanyPersonnel.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/company/entity/TBzCompanyPersonnel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/company/web/TBzCompanyPersonnelController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/company/web/TBzCompanyPersonnelController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/datasource/dao/TBaDatasourceDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/datasource/dao/TBaDatasourceDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/datasource/entity/TBaDatasource.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/datasource/entity/TBaDatasource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/datasource/service/TBaDatasourceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/datasource/service/TBaDatasourceService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/datasource/web/TBaDatasourceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/datasource/web/TBaDatasourceController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/dao/TBzExpertExcelDemoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/dao/TBzExpertExcelDemoDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/dao/TBzInfoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/dao/TBzInfoDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/entity/TBzInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/entity/TBzInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/service/PdfComposeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/service/PdfComposeService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/service/TBzExpertExcelDemoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/service/TBzExpertExcelDemoService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/service/TBzInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/service/TBzInfoService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/DemoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/DemoController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/PdfDemoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/PdfDemoController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/demo/web/TBzInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/demo/web/TBzInfoController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/dao/GenDataBaseDictDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/dao/GenDataBaseDictDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/dao/GenSchemeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/dao/GenSchemeDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/dao/GenTableDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/dao/GenTableDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/dao/GenTemplateDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/dao/GenTemplateDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenCategory.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenCategory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenScheme.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenScheme.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenTable.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenTable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenTableColumn.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenTableColumn.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/entity/GenTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/entity/GenTemplate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/service/GenSchemeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/service/GenSchemeService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/service/GenTableService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/service/GenTableService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/web/GenSchemeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/web/GenSchemeController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/web/GenTableController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/web/GenTableController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/gen/web/GenTemplateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/gen/web/GenTemplateController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/AreaDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/AreaDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/DictDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/DictDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/LogDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/LogDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/OfficeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/OfficeDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/RoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/RoleDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/dao/UserDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Dict.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Dict.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Log.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Menu.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Menu.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Office.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Office.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/Role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/entity/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/interceptor/MobileInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/interceptor/MobileInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/listener/WebContextListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/listener/WebContextListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/security/FormAuthenticationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/security/FormAuthenticationFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/security/LogoutFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/security/LogoutFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/security/UserFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/security/UserFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/AreaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/AreaService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/DictService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/DictService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/LogService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/LogService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/OfficeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/OfficeService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/SystemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/SystemService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/DBUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/DBUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/DictUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/DictUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/ParameterUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/ParameterUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/utils/UserUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/utils/UserUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/AreaController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/AreaController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/DictController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/DictController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LogController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/OfficeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/OfficeController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/RoleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/RoleController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/TagController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/TagController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaNoteRoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaNoteRoleDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaTempActivityDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaTempActivityDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBaTempNoteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBaTempNoteDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/dao/TBzRolePriorityDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/dao/TBzRolePriorityDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaNote.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaNote.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaNoteRole.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaNoteRole.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaTask.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaTempNote.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaTempNote.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/TBaTaskService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/TBaTaskService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/TBaTempActivityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/TBaTempActivityService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/TBzRolePriorityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/TBzRolePriorityService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/service/WorkFlowService.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/service/WorkFlowService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/web/TBzRolePriorityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/base/modules/workflow/web/TBzRolePriorityController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/DictEntityDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/DictEntityDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaAttDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaAttDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaCalendarDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaCalendarDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaFieldDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaFieldDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaFileDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaFileDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaMainSqlDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaMainSqlDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaParameterDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaParameterDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaPublicBeanDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaPublicBeanDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaRegisteredDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaRegisteredDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaSonPublicBeanDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaSonPublicBeanDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaTableConfigDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaTableConfigDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaTableFieldDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/base/TBaTableFieldDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/ArticleDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/ArticleDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/ArticleDataDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/ArticleDataDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CategoryDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CategoryDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CommentDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CommentDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/GuestbookDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/GuestbookDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/LinkDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/LinkDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/SiteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/SiteDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/code/TBzCodeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/code/TBzCodeDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/company/TBzCompanyPersonnelDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/company/TBzCompanyPersonnelDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/datasource/TBaDatasourceDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/datasource/TBaDatasourceDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/demo/TBzExpertExcelDemoDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/demo/TBzExpertExcelDemoDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/demo/TBzInfoDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/demo/TBzInfoDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenDataBaseDictDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenDataBaseDictDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenSchemeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenSchemeDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTableColumnDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTableColumnDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTableDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTableDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTemplateDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/gen/GenTemplateDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/AreaDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/AreaDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/DictDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/DictDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/LogDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/LogDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/MenuDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/MenuDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/OfficeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/OfficeDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/RoleDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/RoleDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/UserDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/sys/UserDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaActivityDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaActivityDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaNoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaNoteDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaNoteRoleDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaNoteRoleDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTaskDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTaskDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTempActivityDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTempActivityDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTempNoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBaTempNoteDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBzRolePriorityDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappings/modules/workflow/TBzRolePriorityDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-context-shiro.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-context-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/config.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/controller.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/controller.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/service.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/service.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/serviceMany.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/curd/serviceMany.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/dao/dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/dao/dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/dao/entity.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/dao/entity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/controller.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/controller.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/entity.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/entity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/service.xml" afterPath="$PROJECT_DIR$/src/main/resources/templates/modules/gen/treetable/service.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/fnc.tld" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/fnc.tld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/fns.tld" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/fns.tld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/shiros.tld" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/shiros.tld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/400.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/400.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/403.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/403.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/404.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/404.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/500.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/500.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/gen/genSchemeForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/gen/genSchemeForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/map/map-image-gps.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/static/map/map-image-gps.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/map/mapfiles/api-3/8/6/usage.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/map/mapfiles/api-3/8/6/usage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +644,7 @@
         </entry>
       </file>
       <file leaf-file-name="SmsEaOperatorNotifyImp.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
               <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
@@ -93,6 +708,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/sys/sysLogin_login.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java" />
       </list>
     </option>
   </component>
@@ -168,6 +784,58 @@
             <path>
               <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
               <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwbase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -818,7 +1486,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15382000" />
+    <option name="totallyTimeSpent" value="15613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="55" width="1920" height="1080" extended-state="0" />
@@ -842,10 +1510,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2683706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -881,7 +1550,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2683706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -908,10 +1576,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="75" column="64" lean-forward="false" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -923,10 +1592,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="75" column="64" lean-forward="false" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -938,10 +1608,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="75" column="64" lean-forward="false" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -953,10 +1624,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -969,7 +1641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/target/lwbase/WEB-INF/views/modules/sys/areaForm.jsp" />
     <entry file="file://$PROJECT_DIR$/target/lwbase/WEB-INF/views/include/taglib.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1007">
           <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="36" />
@@ -1001,7 +1673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/target/lwbase/WEB-INF/views/modules/sys/areaForm.jsp" />
     <entry file="file://$PROJECT_DIR$/target/lwbase/WEB-INF/views/include/taglib.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/socket/SendSmsClient.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/socket/SendSmsClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -1018,7 +1690,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="36" />
@@ -1032,10 +1704,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="75" column="64" lean-forward="false" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,38 +1740,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/workflow/entity/TBaTempActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/workflow/entity/TBaTempActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaAtt.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaAtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/base/entity/TBaCalendar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/base/entity/TBaCalendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/TBaMainSqlDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/TBaMainSqlDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="69" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/base/dao/DictEntityDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/base/dao/DictEntityDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,7 +1795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/Arithmetic.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/orgcode/Arithmetic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="727">
           <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
@@ -1137,22 +1816,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/modules/sys/service/SystemService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/modules/sys/service/SystemService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="412" column="84" lean-forward="false" selection-start-line="412" selection-start-column="84" selection-end-line="412" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/CodeCheckAxis2Service.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/orgcode/axis2/CodeCheckAxis2Service.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="107" column="50" lean-forward="false" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/axis2/CheckCode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/orgcode/axis2/CheckCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
@@ -1166,14 +1847,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/ema/jwsserver/sms/sendCode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/ema/jwsserver/sms/sendCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/orgcode/CodeCheckService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/orgcode/CodeCheckService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
@@ -1202,7 +1883,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lw/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/base/common/ema/ea/sms/webservice/notify/SmsEaOperatorNotifyImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />

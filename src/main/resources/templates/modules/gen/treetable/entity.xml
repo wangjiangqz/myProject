@@ -11,7 +11,7 @@ package ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModule
 import ${i};
 </#list>
 
-import com.lw.common.persistence.TreeEntity;
+import com.base.common.persistence.TreeEntity;
 
 /**
  * ${functionName}Entity
@@ -133,5 +133,5 @@ public class ${ClassName} extends TreeEntity<${ClassName}> {
 		</#if>
 	</#list>
 }]]>
-	</content>
+    </content>
 </template>
