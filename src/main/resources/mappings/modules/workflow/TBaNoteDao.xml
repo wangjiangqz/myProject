@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.workflow.dao.TBaNoteDao">
+    
+	<sql id="tBaNoteColumns">
+		a.id AS "id",
+		a.temp_note_id AS "tempNoteId",
+		a.activity_id AS "activityId.id",
+		a.name AS "name",
+		a.status AS "status",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createdate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.del_flag AS "delFlag",
+		a.remarks AS "remarks"
+	</sql>
+	
+	<sql id="tBaNoteJoins">
+		LEFT JOIN t_ba_activity b ON b.id = a.activity_id
+	</sql>
+    
+	<select id="get" resultType="TBaNote">
+		SELECT 
+			<include refid="tBaNoteColumns"/>
+		FROM t_ba_note a
+		<include refid="tBaNoteJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TBaNote">
+		SELECT 
+			<include refid="tBaNoteColumns"/>
+		FROM t_ba_note a
+		<include refid="tBaNoteJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="activityId != null and activityId.id != ''">
+				AND a.activity_id = #{activityId.id}
+			</if>
+			<if test="name != null and name != ''">
+				AND a.name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{name}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{name}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{name},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.create_date ASC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TBaNote">
+		SELECT 
+			<include refid="tBaNoteColumns"/>
+		FROM t_ba_note a
+		<include refid="tBaNoteJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.create_date ASC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO t_ba_note(
+			id,
+			temp_note_id,
+			activity_id,
+			name,
+			status,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			del_flag,
+			remarks
+		) VALUES (
+			#{id},
+			#{tempNoteId},
+			#{activityId.id},
+			#{name},
+			#{status},
+			#{createBy.id},
+			sysdate,
+			#{updateBy.id},
+			#{updateDate},
+			#{delFlag},
+			#{remarks}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_ba_note SET 	
+			temp_note_id = #{tempNoteId},
+			activity_id = #{activityId.id},
+			name = #{name},
+			status = #{status},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		delete from  t_ba_note 
+		<choose>
+			<when test="id !=null and id != ''">
+				WHERE id = #{id}
+			</when>
+			<otherwise>
+				WHERE activity_id = #{activityId.id}
+			</otherwise>
+		</choose>
+	</update>
+	
+	
+    
+    <update id="updateFlag">
+        UPDATE t_ba_note 
+           SET del_flag = '0',
+               status = '1'
+         WHERE id = #{id}
+    </update>
+
+	<select id="getTBaNote" resultType="TBaNote">
+        SELECT 
+            <include refid="tBaNoteColumns"/>
+        FROM t_ba_note a
+        <include refid="tBaNoteJoins"/>
+        WHERE a.del_flag != '1' 
+        <if test="activityId != null and activityId.id != ''">
+            AND a.activity_id = #{activityId.id}
+        </if>
+            AND a.status = '1'
+    </select>
+    
+    <select id="countTBaNote" resultType="TBaNote">
+        SELECT 
+            <include refid="tBaNoteColumns"/>
+        FROM t_ba_note a
+        <include refid="tBaNoteJoins"/>
+        WHERE a.del_flag = '0' 
+          AND a.temp_note_id = #{tempNoteId}
+    </select>
+	
+	<select id="getTBaNoteList" resultType="TBaNote">
+        SELECT 
+            <include refid="tBaNoteColumns"/>
+        FROM t_ba_note a
+        <include refid="tBaNoteJoins"/>
+        WHERE a.del_flag != '1' 
+        <if test="activityId != null and activityId.id != ''">
+            AND a.activity_id = #{activityId.id}
+        </if>
+        <if test="createBy != null and createBy.id != ''">
+            AND a.create_by != #{createBy.id}
+        </if>
+    </select>
+    
+    <select id="getBeforeTBaNote" resultType="TBaNote">
+        SELECT 
+            <include refid="tBaNoteColumns"/>
+        FROM t_ba_note a
+        <include refid="tBaNoteJoins"/>
+        WHERE a.del_flag != '1' 
+        <if test="activityId != null and activityId.id != ''">
+            AND a.activity_id = #{activityId.id}
+        </if>
+        <if test="status != null and status != ''">
+            AND a.status = '2'
+        </if>
+        ORDER BY a.create_date DESC
+    </select>
+    
+    <select id="queryNoteRestDay" resultType="java.util.Map">
+    	select 
+    		n1.id as "noteId",
+	    	n1.name as "name", 
+	    	getnoteworkdays( n1.activity_id,n1.temp_note_id ) as "days",
+	    	n2.org_name as "orgName",
+	    	n2.activity_name as "activityName"
+    	from t_ba_note n1,t_ba_activity n2
+       where n1.activity_id=n2.id and  n1.status='1'
+    	
+    </select>
+    
+     <select id="getNextTemp" resultType="java.util.Map">
+      select n.id as "noteId", 
+           a2.id as "activityId"   
+      from 
+          t_ba_activity      a2,
+          t_ba_note          n,
+          t_in_cnas_task     t     
+       where
+          a2.id = n.activity_id
+          and n.temp_note_id ='7a9309e7b75c437aa3476a26080db760'
+          and n.status = '1'
+          and t.cma_apply_code = a2.apply_code
+          and t.current_node = '7'
+        
+     </select>
+     
+     <select id="getAttDate" resultType="java.util.Date" >
+        select *
+        from (select a1.create_date as "createDate"
+                from t_bz_review_att a1
+               order by a1.create_date desc)
+       where rownum = 1
+     </select>
+     
+     <select id="getAtt" resultType="java.util.Map" parameterType="String">
+     select 	a1.id AS "id",
+     			a1.file_name   as "fileName",
+            	a1.file_path   as "filePath",
+            	a1.file_type   as "fileType",
+                 a1.create_date as "createDate",
+                 a2.id          as "activityId",
+                 a2.update_by   as "updateBy",
+                 a1.place_id  as "placeId"
+         	   from t_in_cnas_att a1, t_ba_activity a2 ,t_ba_note a3
+               where a1.cma_apply_code = a2.apply_code
+                     and a2.id = a3.activity_id
+                     and a3.status ='1'
+                     and a3.temp_note_id ='7a9309e7b75c437aa3476a26080db760'
+                     and a1.file_status ='1'
+                     and a3.activity_id = #{activityId}
+                     and a1.id not in (select id from t_bz_review_att)
+       				<!--  and to_date(a1.create_date,'yyyy-mm-dd hh24:mi:ss') &gt;#{attDate} -->
+     </select>
+	<!-- 
+	 <update id="updateNextTempFlag" parameterType="java.lang.String">
+        UPDATE t_in_cnas_task 
+           SET deal_status = '2'
+         WHERE id = #{id}
+    </update>
+	 -->
+	<select id="getCNASWorkDate" resultType="java.lang.String" parameterType="java.lang.String">
+    	select getcorrectdays(b.id) 
+    	from  t_ba_note a, t_ba_activity b  
+    	where a.activity_id = b.id
+   			and a.temp_note_id = '7a9309e7b75c437aa3476a26080db760'
+   			and a.status = '1'
+   			and b.id = #{activityId}
+     </select>
+     
+     <select id="getWarmDate" resultType="int" parameterType="java.util.Map">
+    	select count(*)
+  		from t_in_cnas_correct a
+ 		where a.cma_apply_code = #{cmaApplyCode}
+   			and a.cnas_apply_code = #{cnasApplyCode}
+     </select>
+     
+     
+     <select id="getWorkDate" resultType="java.lang.String" parameterType="java.lang.String">
+     select getextendeddays(a.id)
+          from t_ba_activity a, t_ba_note n
+         where a.id = n.activity_id
+           and n.temp_note_id = '7a9309e7b75c437aa3476a26080db760'
+           and n.status = '1'
+           and a.id = #{activityId}
+     </select>
+      
+      <select id="getCnasTotalDate" resultType="java.lang.String" parameterType="java.lang.String">
+       select CNAS_total_DAYS(ac.id)
+       from t_ba_activity ac, t_ba_note n
+         where ac.id = n.activity_id
+           and n.temp_note_id = '7a9309e7b75c437aa3476a26080db760'
+           and n.status = '1'
+           and ac.id = #{activityId}
+     </select>
+     
+     
+     <select id="getDate" resultType="java.util.Map">
+ 		select distinct (a.activity_id) as "activityId",
+                b.apply_code as "cmaApplyCode",
+                ap.cnas_apply_code as "cnasApplyCode",
+                c.org_name as "orgName",
+                a.status as "status"
+		  from t_ba_note a, t_ba_activity b, t_bz_cnas_apply c, t_ba_task e ,t_in_cma_apply ap
+		 where a.activity_id = b.id
+		   and b.apply_id = c.id
+		   and b.id = e.activity_id
+		   and b.apply_code =ap.cma_apply_code
+		   and a.temp_note_id = '7a9309e7b75c437aa3476a26080db760'
+		   and a.status = '1'
+		   and e.status = '1'
+     </select>
+      
+     <select id="getWarn" resultType="java.util.Map">
+    	select *
+	 	 	from( select
+		      	a.start_date as "startDate",
+		      	a.cma_apply_code as "cmaApplyCode",
+		      	a.create_date as "createDate",
+		      	b.org_name as "orgName",
+		      	d.mobile as "mobile",
+		      	d.we_chart_code as "weChartCode",
+		      	d.email as "email",
+		      	sysdate as "sysdate"
+	 		from t_in_cnas_correct a ,t_ba_activity b,t_ba_task c,sys_user d
+			where a.cma_apply_code = b.apply_code 
+	  		and b.id = c.activity_id
+	  		and c.update_by = d.id
+	  		order by  to_date(a.create_date,'yyyy-MM-dd hh24:mi:ss') 
+	  		desc) 
+  		where rownum &lt;= 1
+	 </select> 
+	 
+	  <select id="getEmail" resultType="java.util.Map">
+ 
+   	select distinct(f.email )        as "email",
+           f.mobile               as "mobile",
+           f.we_chart_code       as "weChatCode",
+           f.name                    as "name"
+   		from t_ba_note a, t_ba_activity b,  t_ba_task e, sys_user f
+   		where a.activity_id = b.id
+   		and b.id = e.activity_id
+   		and e.update_by = f.id                                                                                                              
+   		and a.temp_note_id = '7a9309e7b75c437aa3476a26080db760'
+   		and a.status ='1'
+   		and e.status ='1'
+
+	 </select>
+	 
+		<!-- 	 需求：根据整改时间工作日表中的现场评审完成时间之后的第一个工作日为整改开始时间
+			 ，整改开始时间+30个工作日为整改结束时间，把这两个时间添加到整改记录表中就可以 -->
+	 <select id="getCorrectWorkDate" resultType="java.util.Map">
+			select T001.id AS "id",
+					t001.cnas_apply_code AS "cnasCode",
+			       t001.cma_apply_code  AS "cmaCode",
+			       t001.end_date        AS "endDate",
+			       t001.create_date     AS "createdateString"
+			  from T_IN_CNAS_CORRECT_WORKDATE t001
+			 where t001.id not in(select id from T_IN_CMA_RECTIFY_WORKDAY)
+ 	 </select>
+ 	 <insert id="insertCmaRectifyWorkday" parameterType="java.util.Map">
+		INSERT INTO T_IN_CMA_RECTIFY_WORKDAY(
+			id,
+			cnas_apply_code,
+			cma_apply_code,
+			START_DATE,
+			END_DATE,
+			create_date
+		) VALUES (
+			#{id},
+			#{cnasApplyCode},
+			#{cmaApplyCode},
+			#{startDate},
+			#{endDate},
+			#{createdateString}
+		)
+	</insert>
+	<select id="getStartWorkDays" parameterType="java.util.Map" resultType="java.util.Date"> 
+		select GetStartWorkDays(#{startDate},#{workDays}) from dual
+	</select>
+	
+	<!-- 根据流程ID删除当前正在运行的节点 -->
+	<update id="deleteNodeByActivityId" parameterType="String">
+		delete from t_ba_note a 
+		      where a.status = '1' 
+		        and a.activity_id = #{activityId}
+	</update>
+	
+	<!-- 更新节点状态 -->
+	<update id="updateNoteStatus" parameterType="String">
+		update t_ba_note a
+		   set a.status = '1'
+		 where a.id = #{id}
+	</update>
+	
+	
+	<!-- 获取机构提交时间 -->
+	<select id="getOrgSubmitDate" parameterType="String" resultType="TBaNote">
+		select nvl((select max(Tn001.Update_Date) 
+                      from t_ba_note Tn001 
+                     where Tn001.Activity_Id = T001.id
+                       and Tn001.Temp_Note_Id = 'acd856e376f24143be6a36324190885d'),
+	               (select max(Tn001.Update_Date) 
+	                  from t_ba_note Tn001 
+	                 where Tn001.Activity_Id = T001.id
+	                   and Tn001.Temp_Note_Id = '4bbab3f3877f47009f9ede94034e5dfb')) orgSubmitDate, 
+               nvl((select max(Tn001.Update_Date) 
+                      from t_ba_note Tn001 
+                     where Tn001.Activity_Id = T001.id
+                       and Tn001.Temp_Note_Id = '35d4b957f0ad4b8f9fe6bbe63254b59d'),
+                    sysdate) acceptDate
+		  from t_ba_activity T001
+		 where T001.id = #{id}
+	</select>
+	
+		<select id="ajaxCheckNote" resultType="TBaNote" parameterType="String">
+		select
+			a.id AS "id",
+			a.temp_note_id AS "tempNoteId",
+			a.activity_id AS "activityId.id",
+			a.name AS "name",
+			a.status AS "status",
+			a.create_by AS "createBy.id",
+			a.create_date AS "createdate",
+			a.update_by AS "updateBy.id",
+			a.update_date AS "updateDate",
+			a.del_flag AS "delFlag",
+			a.remarks AS "remarks"
+	  from t_ba_note a
+	 where a.activity_id = #{activityId} and a.status = '1'
+	</select>
+</mapper>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.company.dao.TBzCompanyPersonnelDao">
+    
+	<sql id="tBzCompanyPersonnelColumns">
+		a.id AS "id",
+		a.company_name AS "companyName",
+		a.type AS "type",
+		a.recode_code AS "recodeCode",
+		a.person_name AS "personName",
+		a.phone AS "phone",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate"
+	</sql>
+	
+	<sql id="tBzCompanyPersonnelJoins">
+	</sql>
+    
+	<select id="get" resultType="TBzCompanyPersonnel">
+		SELECT 
+			<include refid="tBzCompanyPersonnelColumns"/>
+		FROM t_bz_company_personnel a
+		<include refid="tBzCompanyPersonnelJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TBzCompanyPersonnel">
+		SELECT 
+			<include refid="tBzCompanyPersonnelColumns"/>
+		FROM t_bz_company_personnel a
+		<include refid="tBzCompanyPersonnelJoins"/>
+		<where>
+			
+			<if test="companyName != null and companyName != ''">
+				AND a.company_name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{companyName}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{companyName}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{companyName},'%')</if>
+			</if>
+			<if test="recodeCode != null and recodeCode != ''">
+				AND a.recode_code = #{recodeCode}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TBzCompanyPersonnel">
+		SELECT 
+			<include refid="tBzCompanyPersonnelColumns"/>
+		FROM t_bz_company_personnel a
+		<include refid="tBzCompanyPersonnelJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO t_bz_company_personnel(
+			id,
+			company_name,
+			type,
+			recode_code,
+			person_name,
+			phone,
+			create_by,
+			create_date,
+			update_by,
+			update_date
+		) VALUES (
+			#{id},
+			#{companyName},
+			#{type},
+			#{recodeCode},
+			#{personName},
+			#{phone},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_bz_company_personnel SET 	
+			company_name = #{companyName},
+			type = #{type},
+			recode_code = #{recodeCode},
+			person_name = #{personName},
+			phone = #{phone},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM t_bz_company_personnel
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

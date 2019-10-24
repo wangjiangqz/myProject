@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav_menu height父级需逐级设置为100%*/
+body,html{height: 100%;background: #E2E2E2}
+body,ul{margin:0;padding:0}
+li{list-style:none}
+a{text-decoration:none;}
+/* 以上实际使用若已初始化可删除 */
+
+/* nav_menu */
+.nav_menu a{display: block;overflow: hidden;line-height: 46px;max-height: 46px;color: #000;transition: all .3s;}
+.nav_menu a span{margin-left: 5px;}
+.nav_menu-item{position: relative;}
+.nav_menu-item.nav_menu-show{border-bottom: none;}
+.nav_menu-item ul{display: none;}
+/*---------------------*/
+.nav_menu-show .nav_menu-more{transform:rotate(90deg);}
+.nav_menu-show>a,.nav_menu-item a:hover{
+    color:#5a85be;
+    text-decoration: none;
+}
+/* nav_menu-mini */
+.nav_menu-mini.nav_menu{width: 60px;}
+.nav_menu-mini.nav_menu .nav_menu-icon{/* margin-left:-2px; */}
+.nav_menu-mini.nav_menu .nav_menu-item>a span{display: none;}
+.nav_menu-mini.nav_menu .nav_menu-more{margin-right: -20px;}
+.nav_menu-mini.nav_menu .nav_menu-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
+.nav_menu-mini.nav_menu .nav_menu-item:hover{background:rgba(255,255,255,.1);}
+.nav_menu-mini.nav_menu .nav_menu-item:hover .nav_menu-item a{color:#FFF;}
+.nav_menu-mini.nav_menu .nav_menu-item:hover a:before{opacity:1;}
+.nav_menu-mini.nav_menu .nav_menu-item:hover ul{display: block;}
+
+
+.left_menu,.right_menu{
+    float: left;
+}
+.left_menu{
+    width: 80px;
+    height:100%;
+    color: #ffffff;
+    color: #ffffff;
+    background-color: #7ca5db;
+}
+.left_menu ul, li{
+    list-style: none;
+    margin: 0px !important;
+}
+.left_menu li{
+    line-height: 70px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+}
+.left_menu .a-select{
+    background-color: #ffffff;
+    color: #5a85be !important;
+}
+.right_menu{
+    width: calc(100% - 80px);
+    width:-moz-calc(100% - 80px);
+    width:-webkit-calc(100% - 80px);
+    height: 100%;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+.first_level >a{
+    color: #808080 !important;
+    border-bottom: 1px #cccccc solid;
+    margin: 0px 10px;
+    width: calc(100% - 40px);
+    width:-moz-calc(100% - 40px);
+    width:-webkit-calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.second_level >a{
+    padding-left: 10px;
+    border-bottom: 1px #ddd solid;
+    margin: 0px 10px;
+    width: calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    box-sizing: border-box;
+    background: url("../images/arrow_right.png") no-repeat;
+    background-position-y: 50%;
+}
+.nav_menu-show.second_level >a{
+    background: url("../images/arrow_down.png") no-repeat;
+    background-position-y: 50%;
+}
+.second_level ul span{
+    border-left: 1.2px #5a85be solid;
+    padding-left: 8px;
+}
+#parent_ul{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: calc(100% + 20px);
+    width:-moz-calc(100% + 20px);
+    width:-webkit-calc(100% + 20px);
+}
+.left_menu a{
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.third_level>a{
+    background-color: #f5f5f5;
+}

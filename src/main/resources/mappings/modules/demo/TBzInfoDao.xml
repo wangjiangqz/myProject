@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.demo.dao.TBzInfoDao">
+
+	<sql id="tBzInfoColumns">
+		a.id AS "id",
+		a.userid AS "userid",
+		a.title AS "title",
+		a.content AS "content",
+		a.flag AS "flag",
+		a.createby AS "createby",
+		a.createdate AS "createdate",
+		a.updateby AS "updateby",
+		a.updatedate AS
+		"updatedate"
+	</sql>
+
+	<sql id="tBzInfoJoins">
+	</sql>
+
+	<select id="get" resultType="TBzInfo">
+		SELECT
+		<include refid="tBzInfoColumns" />
+		FROM t_bz_info a
+		<include refid="tBzInfoJoins" />
+		WHERE a.id = #{id}
+	</select>
+
+	<select id="findList" resultType="TBzInfo">
+		SELECT
+		<include refid="tBzInfoColumns" />
+		FROM t_bz_info a
+		<include refid="tBzInfoJoins" />
+		<where>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+
+	</select>
+
+	<select id="findAllList" resultType="TBzInfo">
+		SELECT
+		<include refid="tBzInfoColumns" />
+		FROM t_bz_info a
+		<include refid="tBzInfoJoins" />
+		<where>
+
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<insert id="insert">
+		INSERT INTO t_bz_info(
+		id,
+		userid,
+		title,
+		content,
+		flag,
+		createby,
+		createdate,
+		updateby,
+		updatedate
+		) VALUES (
+		#{id},
+		#{userid},
+		#{title},
+		#{content},
+		#{flag},
+		#{createby},
+		#{createdate},
+		#{updateby},
+		#{updatedate}
+		)
+	</insert>
+
+	<update id="update">
+		UPDATE t_bz_info SET
+		userid = #{userid},
+		title = #{title},
+		content = #{content},
+		flag = #{flag},
+		createby = #{createby},
+		createdate = #{createdate},
+		updateby = #{updateby},
+		updatedate = #{updatedate}
+		WHERE id = #{id}
+	</update>
+
+	<update id="delete">
+		DELETE FROM t_bz_info
+		WHERE id = #{id}
+	</update>
+
+	<select id="getByUser" resultType="TBzInfo">
+		SELECT
+		<include refid="tBzInfoColumns" />
+		FROM t_bz_info a
+		<include refid="tBzInfoJoins" />
+		WHERE a.userid = #{id} AND a.flag = '00'
+	</select>
+
+	<update id="haveReadData">
+		update t_bz_info a
+		set a.flag = '01'
+		WHERE id = #{id}
+	</update>
+</mapper>

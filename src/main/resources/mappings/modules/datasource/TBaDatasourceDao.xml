@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.datasource.dao.TBaDatasourceDao">
+    
+	<sql id="tBaDatasourceColumns">
+		a.id AS "id",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.data_name AS "dataName",
+		a.data_type AS "dataType",
+		a.result_type AS "resultType",
+		a.data_source_identifier AS "dataSourceIdentifier",
+		a.custom_table_name AS "customTableName",
+		a.unique_constraint AS "uniqueConstraint",
+		a.deleting_constraint AS "deletingConstraint"
+	</sql>
+	
+	<sql id="tBaDatasourceJoins">
+	</sql>
+    
+	<select id="get" resultType="TBaDatasource">
+		SELECT 
+			<include refid="tBaDatasourceColumns"/>
+		FROM t_ba_datasource a
+		<include refid="tBaDatasourceJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TBaDatasource">
+		SELECT 
+			<include refid="tBaDatasourceColumns"/>
+		FROM t_ba_datasource a
+		<include refid="tBaDatasourceJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="dataName != null and dataName != ''">
+				AND a.data_name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{dataName}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{dataName}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{dataName},'%')</if>
+			</if>
+			<if test="dataType != null and dataType != ''">
+				AND a.data_type = #{dataType}
+			</if>
+			<if test="resultType != null and resultType != ''">
+				AND a.result_type = #{resultType}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TBaDatasource">
+		SELECT 
+			<include refid="tBaDatasourceColumns"/>
+		FROM t_ba_datasource a
+		<include refid="tBaDatasourceJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO t_ba_datasource(
+			id,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			data_name,
+			data_type,
+			result_type,
+			data_source_identifier,
+			custom_table_name,
+			unique_constraint,
+			deleting_constraint
+		) VALUES (
+			#{id},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{dataName},
+			#{dataType},
+			#{resultType},
+			#{dataSourceIdentifier},
+			#{customTableName},
+			#{uniqueConstraint},
+			#{deletingConstraint}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_ba_datasource SET 	
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			data_name = #{dataName},
+			data_type = #{dataType},
+			result_type = #{resultType},
+			data_source_identifier = #{dataSourceIdentifier},
+			custom_table_name = #{customTableName},
+			unique_constraint = #{uniqueConstraint},
+			deleting_constraint = #{deletingConstraint}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE t_ba_datasource SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

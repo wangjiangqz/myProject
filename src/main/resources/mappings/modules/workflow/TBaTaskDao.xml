@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.workflow.dao.TBaTaskDao">
+    
+	<sql id="tBaTaskColumns">
+		a.id AS "id",
+		a.note_id AS "noteId",
+		a.activity_id AS "activityId",
+		a.note_name AS "noteName",
+		a.dual_opinion AS "dualOpinion",
+		a.opinion_content AS "opinionContent",
+		case when a.UPDATE_BY=a.FORMER_TRANSACTOR or a.FORMER_TRANSACTOR is null
+  		then  a.update_name else
+  		((select TO_CHAR(name) from SYS_USER where id=a.UPDATE_BY)||'(代'||a.update_name||'处理)')
+ 		end AS "updateName",
+		a.create_name AS "createName",
+		a.att_ids AS "attIds",
+		a.status AS "status",
+		a.is_send AS "isSend",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.del_flag AS "delFlag",
+		a.remarks AS "remarks",
+		a.last_Task_Id AS "lastTaskId",
+		a.standy AS "standy",
+		a.standy1 AS "standy1",
+		a.standy2 AS "standy2",
+		a.standy3 AS "standy3",
+		a.standy4 AS "standy4",
+		a.priority AS "priority",
+		a.FORMER_TRANSACTOR AS "formerTransactor",
+		b.file_Name as "fileName",
+		c.temp_note_id as "tempNoteId",
+		(select br.attds from t_bz_review br where br.activity_id=a.activity_id) as "tBzReview.attds",
+		(select f.file_name from t_ba_file f,t_bz_review br where f.id=br.attds and br.activity_id=a.activity_id) as "tBzReview.fileName",
+		a.is_file_show AS "isFileShow"
+	</sql>
+	
+	<sql id="tBaTaskJoins">
+	left join t_ba_file b on a.att_ids=b.id
+	inner join t_ba_note c on c.id=a.note_id
+
+	</sql>
+    
+	<select id="get" resultType="TBaTask">
+		SELECT 
+			<include refid="tBaTaskColumns"/>
+		FROM t_ba_task a
+		<include refid="tBaTaskJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="getByTBaTask" resultType="TBaTask">
+	   select * from (
+		SELECT 
+			<include refid="tBaTaskColumns"/>
+		FROM t_ba_task a
+		<include refid="tBaTaskJoins"/>
+		WHERE 1=1
+		<if test=" updateBy != null and updateBy !='' ">
+		    and  a.update_by = #{updateBy.id}
+		</if>
+		<if test="activityId != null and activityId != ''">
+		    and a.activity_id = #{activityId}
+		</if>
+		<if test="status != null and status != ''">
+		    and a.status = #{status}
+		</if>
+		<if test="noteId != null and noteId != ''">
+		    and a.note_id = #{noteId}
+		</if>
+		<if test="tempNoteId!=null and tempNoteId!=''"> 
+			 and c.temp_note_id=#{tempNoteId}
+		</if>
+		order by a.update_date desc) where rownum=1 
+	</select>
+	
+		
+	<select id="findList" resultType="TBaTask">
+		SELECT 
+			<include refid="tBaTaskColumns"/>
+		FROM t_ba_task a
+		<include refid="tBaTaskJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="activityId != null and activityId != ''">
+		        and a.activity_id = #{activityId}
+		    </if>
+		    <if test="status != null and status != ''">
+		        and a.status = #{status}
+		    </if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date asc, a.status DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TBaTask">
+		SELECT 
+			<include refid="tBaTaskColumns"/>
+		FROM t_ba_task a
+		<include refid="tBaTaskJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+    <select id="getTBaTaskList" resultType="TBaTask">
+        SELECT 
+            <include refid="tBaTaskColumns"/>
+          FROM t_ba_task a
+        <include refid="tBaTaskJoins"/>
+         WHERE a.del_flag = '0'
+        <if test="activityId != null and activityId != ''">
+           AND a.activity_id = #{activityId}
+        </if>
+        <if test="status != null and status != ''">
+           AND a.status = #{status}
+        </if>
+        <if test="lastTaskId != null and lastTaskId !=''">
+          AND (a.last_Task_Id != #{lastTaskId} OR a.last_Task_Id IS NULL)
+        </if>
+        <if test="noteId!=null and noteId !=''">
+        	and a.note_id=#{noteId}
+        </if>
+        order by a.create_date ASC
+    </select>	
+	<insert id="insert">
+		INSERT INTO t_ba_task(
+			id,
+			note_id,
+			activity_id,
+			note_name,
+			dual_opinion,
+			opinion_content,
+			update_name,
+			create_name,
+			att_ids,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			del_flag,
+			remarks,
+			status,			
+			is_send,
+			SEND_CONTENT,
+			DUAL_TYPE,
+			LAST_TASK_ID,
+			standy,
+			standy1,
+			standy2,
+			standy3,
+			standy4,
+			priority,
+			is_file_show,
+			former_Transactor
+		) VALUES (
+			#{id},
+			#{noteId},
+			#{activityId},
+			#{noteName},
+			#{dualOpinion},
+			#{opinionContent},
+			#{updateName},
+			#{createName},
+			#{attIds},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{delFlag},
+			#{remarks},
+			#{status},			
+			#{isSend},
+			#{sendContent},
+			#{dualType},
+			#{lastTaskId},
+			#{standy},
+			#{standy1},
+			#{standy2},
+			#{standy3},
+			#{standy4},
+			#{priority},
+			#{isFileShow},
+			#{formerTransactor}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_ba_task SET 	
+			note_id = #{noteId},
+			activity_id = #{activityId},
+			note_name = #{noteName},
+			dual_opinion = #{dualOpinion},
+			opinion_content = #{opinionContent},
+			update_name = #{updateName},
+			create_name = #{createName},
+			att_ids = #{attIds},
+			status = #{status},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},			
+			is_send = #{isSend},
+			SEND_CONTENT = #{sendContent},
+			DUAL_TYPE = #{dualType},
+			LAST_TASK_ID = #{lastTaskId},
+			standy = #{standy},
+			standy1 = #{standy1},
+			standy2 = #{standy2},
+			standy3 = #{standy3},
+			standy4 = #{standy4},
+			priority = #{priority},
+			is_file_show = #{isFileShow},
+			former_Transactor = #{formerTransactor}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		delete from t_ba_task a where 1=1
+		<if test="id!=null and id!=''">
+		and a.id=#{id}
+		 </if>
+		 <if test="noteId!=null and noteId!=''">
+		and a.note_id=#{noteId}
+		 </if>
+		 <if test="activityId!=null and activityId!=''">
+		and a.activity_id=#{activityId}
+		 </if>
+		
+	</update>
+
+    <!-- 删除当前节点下未处理的任务 -->
+    <update id="deleteOthersTask" >
+        delete from t_ba_task  WHERE note_id = #{noteId}  AND status = '1' AND update_by != #{updateBy.id}
+    </update>
+
+	<!-- 删除当前节点下未处理的任务 -->
+	<update id="deleteOthersTaskAll" >
+		delete from t_ba_task  WHERE note_id = #{noteId}  AND status = '1'
+	</update>
+	
+	<select id="queryTempNoteId" resultType="String">
+        SELECT c.id
+          FROM t_ba_task a, t_ba_note b, t_ba_temp_note c
+         WHERE a.note_id = b.id
+           AND b.temp_note_id = c.id
+           AND a.id = #{id}
+    </select>
+	
+	<select id="queryReviewType" resultType="String">
+	    SELECT c.dual_opinion
+          FROM (SELECT a.id, a.note_name, b.temp_note_id, a.dual_opinion
+                  FROM t_ba_task a, t_ba_note b
+                 WHERE b.temp_note_id = 'd36e5630ff414557812582db4ada6e75'
+                   AND a.note_id = b.id
+                   AND b.activity_id = (SELECT c.activity_id
+                                          FROM t_ba_task c
+                                         WHERE c.id = #{id})
+                                         ORDER BY b.create_date DESC) c
+         WHERE ROWNUM = 1
+	</select>
+	<select id="getTaskByLastTaskCount" resultType="Integer" parameterType="java.util.Map">
+		select count(*) from t_ba_task t 
+		where 	t.last_task_id=#{lastTaskId} 
+				and t.id!=#{id}
+				and t.status=#{status}
+	</select>
+	
+	<!-- 获得下一个权重 -->
+	<select id="getNextPriority" resultType="java.lang.String" parameterType="java.util.Map">
+		SELECT MIN(a.priority)
+          FROM t_bz_role_priority a
+         INNER JOIN sys_role b
+                 ON a.role_id = #{roleId}
+         WHERE a.priority &gt; #{priority}
+	</select>
+
+	<select id="getCertbelong" resultType="java.lang.String" parameterType="java.lang.String">
+		SELECT ta003.cert_belong
+         FROM t_ba_activity ta001, t_ba_task ta002,
+              (SELECT tb001.id, tb001.cert_belong
+                 FROM t_bz_apply tb001
+                UNION ALL
+               SELECT tb002.id, tb002.cert_belong
+                 FROM t_bz_cnas_apply tb002) ta003
+        WHERE ta001.id = ta002.activity_id
+          AND ta001.apply_id = ta003.id
+          AND ta002.id = #{taskId}
+	</select>
+
+
+	<!-- 获得下一个权重 -->
+	<select id="getNextRole" resultType="java.lang.String" parameterType="java.util.Map">
+		select decode((select count(1)
+                 from t_ba_note_role a, sys_role b
+                where a.role_id = b.id
+                  and a.del_flag = '0'
+                  and b.del_flag = '0'
+                  and a.note_id = #{tempNoteId}), 1,
+               (select b.id
+                   from t_ba_note_role a, sys_role b
+                  where a.role_id = b.id
+                    and a.del_flag = '0'
+                    and b.del_flag = '0'
+                    and a.note_id = #{tempNoteId}),
+               (select b.id
+                   from t_ba_note_role a, sys_role b
+                  where a.role_id = b.id
+                    and a.del_flag = '0'
+                    and b.del_flag = '0'
+                    and b.enname like decode(#{certBelong}, '01', 'YIC%', '02', 'ERC%', '03', 'SANC%', 'ALL%')
+                    and a.note_id = #{tempNoteId})) roleId
+        from dual
+	</select>
+
+	<!-- 获得最大权重 -->
+	<select id="getMaxPriority" resultType="java.lang.String" parameterType="java.util.Map">
+		SELECT max(a.priority)
+		FROM t_bz_role_priority a
+		INNER JOIN sys_role b
+		ON a.role_id = b.id
+		INNER JOIN t_ba_note_role c
+		ON c.role_id = b.id
+		AND c.del_flag = '0'
+		AND c.note_id = #{tempNoteId}
+	</select>
+	
+	
+	<select id="getTaskByNoteAndUser" resultType="TBaTask">
+		SELECT 
+			<include refid="tBaTaskColumns"/>
+		FROM t_ba_task a
+		<include refid="tBaTaskJoins"/>
+		WHERE 1=1
+		<if test="noteId!=null and noteId!=''">
+			and a.note_id=#{noteId}
+		</if>
+		<if test="updateBy!=null and updateBy.id!=null and updateBy.id!=''">
+			and a.update_by=#{updateBy.id}
+		</if>
+	</select>
+	
+	<select id="getBackTask" resultType="TBaTask" parameterType="java.util.Map">
+        select * 
+          from (select a.id AS "id", 
+                       a.note_id AS "noteId", 
+                       a.activity_id AS "activityId", 
+                       a.note_name AS "noteName", 
+                       a.dual_opinion AS "dualOpinion", 
+                       a.opinion_content AS "opinionContent", 
+                       case when a.UPDATE_BY=a.FORMER_TRANSACTOR or a.FORMER_TRANSACTOR is null
+  						then  a.update_name else
+  						((select TO_CHAR(name) from SYS_USER where id=a.UPDATE_BY)||'(代'||a.update_name||'处理)')
+ 						end AS "updateName",
+                       a.create_name AS "createName", 
+                       a.att_ids AS "attIds", 
+                       a.status AS "status", 
+                       a.create_by AS "createBy.id", 
+                       a.create_date AS "createDate", 
+                       a.update_by AS "updateBy.id", 
+                       a.update_date AS "updateDate", 
+                       a.del_flag AS "delFlag", 
+                       a.remarks AS "remarks", 
+                       a.last_Task_Id AS "lastTaskId", 
+                       a.standy AS "standy", 
+                       a.standy1 AS "standy1",
+                       a.is_file_show AS "isFileShow",
+                       a.former_Transactor AS "formerTransactor"
+                  from t_ba_task A  
+                 where A.activity_id=#{activityId} 
+                   and A.note_name=#{noteName} 
+                 order by A.update_date DESC) 
+                 where rownum=1
+	</select>
+	
+	<update id="updateFlowReviewPerson">
+		update t_ba_task t
+		set t.update_by = #{afterUserId}
+		where t.update_by = #{beforeUserId}
+		   and t.note_id in
+		       (select n.id
+		          from t_ba_note n
+		         where n.activity_id = #{activityId}
+		           and n.temp_note_id in
+		               ('5012fd71522347049eaf78ca7fce5525',
+		                '64c3e92a53a640fb92913e88ac2e00bb'))
+	
+	</update>
+		<select id="getCNASTask" resultType="TBaTask" parameterType="java.lang.String">
+select * from t_ba_task where activity_id=#{0} and note_name='资质认定受理' and dual_opinion='03'
+
+	</select>
+	<select id="getTInCnasTask" resultType="java.util.Map">
+			select 
+					a.id AS "cnasTsakId", 
+					a.cma_apply_code AS "cmaApplyCode", 
+					a.cnas_apply_code AS "cnasApplyCode",
+					a.current_node As "cnasTaskCurrentNode",
+					a.deal_person AS "cnasTaskDealPerson",
+					a.deal_date AS "cnasTaskDealDate",
+         			a.deal_opinion AS "cnasTaskDealOpintion",
+         			a.deal_status AS "cnasTaskDealStatus",
+          			a.create_date AS "cnasTaskCreateDate"
+			from T_IN_CNAS_TASK a 
+			where a.cma_apply_code = #{cmaCode} order by to_date(a.create_date ,'yyyy-mm-dd HH24:mi:ss')  asc
+
+	</select>
+	<select id="getTInCnasReview" resultType="java.util.Map">
+			select 
+					distinct(b.name) AS "name",
+					b.role AS "role",
+					b.type AS"type",
+					b.mobile AS "mobile",
+					a.plan_code AS "planCode",
+					a.start_date AS "startDate",
+					a.end_date AS "endDate" ,
+					a.cnas_apply_code AS "cnasApplyCode"
+			 from t_in_cnas_review a,t_in_cnas_review_person b
+			where a.id =b.review_id
+		   	  and a.cma_apply_code = #{cmaCode}
+			  and b.member_status = '1'
+
+	</select>
+	<select id="getTInCnasCorrect" resultType="java.util.Map">
+		select a.start_date as "startDate" ,
+       	a.create_date as "createDate",
+       	a.rectify_comments as "rectifyComments",
+       	a.end_date as "endDate"
+ 		from t_in_cnas_correct a 
+ 		where a.cnas_apply_code =#{cnasCode} order by to_date(a.create_date ,'yyyy-mm-dd HH24:mi:ss')  asc
+	</select>
+	<select id="getTInCnasDelayInfo" resultType="java.util.Map">
+		select a.apply_time as "applyTime",
+       	a.review_time as "reviewTime",
+       	a.start_time as "startTime",
+       	a.end_time as "endTime"
+ 		from t_in_cnas_delay_info a
+ 		where a.cnas_apply_code =#{cnasCode} order by to_date(a.create_date ,'yyyy-mm-dd HH24:mi:ss')  asc
+	</select>
+	<!-- cnas 当前用可以处理此节点 -->
+	<select id="getCnasTaskByCmaCode" resultType="TBaTask" >
+			SELECT T001.ID AS "id",
+			       T001.NOTE_ID AS "noteId" ,
+			       T001.ACTIVITY_ID AS "activityId",
+			       T001.NOTE_NAME AS "noteName",
+			       T001.DUAL_OPINION AS "dualOpinion",
+			       T001.OPINION_CONTENT AS "opinionContent",
+			       T001.UPDATE_NAME AS "updateName",
+			       T001.CREATE_NAME AS "createName",
+			       T001.ATT_IDS AS "attIds",
+			       T001.CREATE_BY AS "createBy.id",
+			       T001.CREATE_DATE AS "createDate",
+			       T001.UPDATE_BY AS "updateBy.id",
+			       T001.UPDATE_DATE AS "updateDate",
+			       T001.DEL_FLAG AS "delFlag",
+			       T001.STATUS AS "status",
+			       T001.LAST_TASK_ID AS "lastTaskId"
+			  FROM t_ba_task T001, t_ba_activity T002, t_ba_note T003
+			 WHERE T001.Activity_Id = T002.Id AND T001.Note_Id = T003.ID AND
+			       T002.Apply_Code = #{cmaCode} AND T003.status = '1' AND
+			       T001.Update_By = #{userId}
+			 ORDER BY T001.Create_Date desc
+			        
+	</select>
+	<!-- cnas 当前用户不可以处理此节点 -->
+		<select id="getCnasTaskByCmaCodeNot" resultType="TBaTask" parameterType="java.util.Map">
+		SELECT * 
+		FROM (
+				SELECT  T001.id AS "id",
+						T001.note_id AS "noteId",
+						T001.activity_id AS "activityId",
+						T001.note_name AS "noteName",
+						T001.dual_opinion AS "dualOpinion",
+						T001.opinion_content AS "opinionContent",
+						T001.update_name AS "updateName",
+						T001.create_name AS "createName"
+			  	  FROM t_ba_task T001, t_ba_activity T002
+			     WHERE T001.Activity_Id = T002.Id
+			       AND T002.Apply_Code = #{cmaCode}
+			       AND T001.status = '1'
+			  ORDER BY T001.Create_Date desc
+		) 
+		WHERE rownum = 1
+	</select>
+	
+	
+	<select id="getDualOpinion" parameterType="java.lang.String" resultType="TBaTask" > 
+		 select t004.dual_opinion as dualOpinion
+ 		   from t_ba_note t003, t_ba_task t004
+		  where t003.id = t004.note_id and
+		        t003.activity_id = #{0} and
+		        t003.temp_note_id = '35d4b957f0ad4b8f9fe6bbe63254b59d' and
+		        t004.create_date =
+		        (select max(t002.create_date)
+		           from t_ba_note t001, t_ba_task t002
+		          where t001.id = t002.note_id and
+		                t001.activity_id = #{0} and
+		                t001.temp_note_id = '35d4b957f0ad4b8f9fe6bbe63254b59d')
+	</select>
+	
+	<!-- 获得流程记录信息集合  -->
+	<select id="findWorkFlowList" resultType="TBaTask">
+		SELECT a.id AS "id", a.note_id AS "noteId", a.activity_id AS "activityId",
+		       tn.name AS "noteName", tn.id AS "tempNoteId",
+		       a.dual_opinion AS "dualOpinion",
+		       case  when tn.id = '35d4b957f0ad4b8f9fe6bbe63254b59d' and a.dual_opinion = '01' then 
+        		a.opinion_content || '(' || to_char(substr((select wm_concat(a.name || ':' || a.opinion) from t_bz_correct a 
+                where a.apply_id = (select APPLY_ID from T_BA_ACTIVITY where id = #{activityId})  and a.choose='1' group by a.apply_id),1,1000)) || ')'
+       			else
+         		a.opinion_content 
+        		end AS "opinionContent",
+		        case
+		        WHEN a.NOTE_ID='8b1e5833200841a1bb4c74e4c11c4c8c'
+                then (select ORG_NAME from T_BZ_APPLY WHERE id=
+				(select APPLY_ID from T_BA_ACTIVITY where id=#{activityId}))
+				WHEN a.NOTE_ID='2d831b5fcd064a6fa22f907fb5c7e749'
+                then (select ORG_NAME from T_BZ_APPLY WHERE id=
+				(select APPLY_ID from T_BA_ACTIVITY where id=#{activityId}))
+				else
+                case when a.UPDATE_BY=a.FORMER_TRANSACTOR or a.FORMER_TRANSACTOR is null
+                  then  a.update_name else
+                  ((select TO_CHAR(name) from SYS_USER where id=a.UPDATE_BY)||'(代'||a.update_name||'处理)')
+                    end
+                 end AS "updateName",
+		       a.create_name AS "createName", a.att_ids AS "attIds",
+		       a.status AS "status", a.is_send AS "isSend",
+		       nvl(a.create_by, c.create_by) AS "createBy.id",
+		       nvl(a.create_date, c.create_date) AS "createDate",
+		       nvl(a.update_by, c.update_by) AS "updateBy.id",
+		       nvl(a.update_date, c.update_date) AS "updateDate",
+		       a.del_flag AS "delFlag", a.remarks AS "remarks",
+		       a.last_Task_Id AS "lastTaskId", a.standy AS "standy",
+		       a.standy1 AS "standy1", a.standy2 AS "standy2",
+		       a.standy3 AS "standy3", a.standy4 AS "standy4",
+		       a.priority AS "priority",
+		       (select b.file_name from t_ba_file b where b.id = a.att_ids) "fileName",
+		       (select br.attds
+		           from t_bz_review br
+		          where br.activity_id = a.activity_id) as "tBzReview.attds",
+		       (select f.file_name
+		           from t_ba_file f, t_bz_review br
+		          where f.id = br.attds
+		            and br.activity_id = a.activity_id) as "tBzReview.fileName",
+		       a.is_file_show AS "isFileShow"
+		  FROM t_ba_task a, t_ba_note c, t_ba_temp_note tn
+		 WHERE c.id = a.note_id(+)
+		   and c.del_flag = '0'
+		   and a.del_flag = '0'
+		   and c.temp_note_id = tn.id 
+		   and c.activity_id =  #{activityId}
+		 ORDER BY a.create_date asc, a.status DESC
+	</select>
+	
+	<!-- 根据任务ID更新电子签章附件ID -->
+	<update id="updateFileByTaskId">
+	    update t_ba_task a
+	       set a.att_ids = #{attIds}
+	     where a.id = #{id}
+	</update>
+	
+
+</mapper>

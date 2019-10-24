@@ -1,0 +1,5 @@
+<script src="${ctxStatic}/browserVerification/browser.js" type="text/javascript"></script>
+<link href="${ctxStatic}/browserVerification/tips.css" type="text/css" rel="stylesheet" />
+<script src="${ctxStatic}/browserVerification/tips.js" type="text/javascript"></script>
+
+上面三行放入登录页面

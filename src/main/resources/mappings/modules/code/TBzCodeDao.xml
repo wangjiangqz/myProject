@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.code.dao.TBzCodeDao">
+    
+	<sql id="tBzCodeColumns">
+		a.column1 AS "column1",
+		a.column2 AS "column2",
+		a.column3 AS "column3",
+		a.column4 AS "column4",
+		a.column5 AS "column5",
+		a.column6 AS "column6",
+		a.column7 AS "column7",
+		a.column8 AS "column8",
+		a.column9 AS "column9",
+		a.column10 AS "column10",
+		a.column11 AS "column11",
+		a.column12 AS "column12",
+		a.column13 AS "column13",
+		a.column14 AS "column14",
+		a.column15 AS "column15",
+		a.column16 AS "column16",
+		a.column17 AS "column17",
+		a.column18 AS "column18",
+		a.column19 AS "column19",
+		a.column20 AS "column20",
+		a.column21 AS "column21",
+		a.column22 AS "column22",
+		a.column23 AS "column23",
+		a.column24 AS "column24",
+		a.column25 AS "column25",
+		a.column26 AS "column26",
+		a.column27 AS "column27",
+		a.column28 AS "column28",
+		a.column29 AS "column29",
+		a.column30 AS "column30"
+	</sql>
+	
+	<sql id="tBzCodeJoins">
+	</sql>
+    
+	<select id="get" resultType="TBzCode">
+		SELECT 
+			<include refid="tBzCodeColumns"/>
+		FROM t_bz_code a
+		<include refid="tBzCodeJoins"/>
+		WHERE a.id = #{id}
+	</select>
+
+	<select id="findList" resultType="TBzCode">
+		SELECT
+		<include refid="tBzCodeColumns"/>
+		FROM t_bz_code a
+		<include refid="tBzCodeJoins"/>
+		<where>
+
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="findAllList" resultType="TBzCode">
+		SELECT 
+			<include refid="tBzCodeColumns"/>
+		FROM t_bz_code a
+		<include refid="tBzCodeJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="executeSql" resultType="com.lw.modules.code.entity.OwnMap" parameterType="com.lw.modules.code.entity.OwnMap">
+		${sql}
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<!--<insert id="insert">
+		INSERT INTO t_bz_code(
+			column1,
+			column2,
+			column3,
+			column4,
+			column5,
+			column6,
+			column7,
+			column8,
+			column9,
+			column10,
+			column11,
+			column12,
+			column13,
+			column14,
+			column15,
+			column16,
+			column17,
+			column18,
+			column19,
+			column20,
+			column21,
+			column22,
+			column23,
+			column24,
+			column25,
+			column26,
+			column27,
+			column28,
+			column29,
+			column30
+		) VALUES (
+			#{column1},
+			#{column2},
+			#{column3},
+			#{column4},
+			#{column5},
+			#{column6},
+			#{column7},
+			#{column8},
+			#{column9},
+			#{column10},
+			#{column11},
+			#{column12},
+			#{column13},
+			#{column14},
+			#{column15},
+			#{column16},
+			#{column17},
+			#{column18},
+			#{column19},
+			#{column20},
+			#{column21},
+			#{column22},
+			#{column23},
+			#{column24},
+			#{column25},
+			#{column26},
+			#{column27},
+			#{column28},
+			#{column29},
+			#{column30}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_bz_code SET 	
+			column1 = #{column1},
+			column2 = #{column2},
+			column3 = #{column3},
+			column4 = #{column4},
+			column5 = #{column5},
+			column6 = #{column6},
+			column7 = #{column7},
+			column8 = #{column8},
+			column9 = #{column9},
+			column10 = #{column10},
+			column11 = #{column11},
+			column12 = #{column12},
+			column13 = #{column13},
+			column14 = #{column14},
+			column15 = #{column15},
+			column16 = #{column16},
+			column17 = #{column17},
+			column18 = #{column18},
+			column19 = #{column19},
+			column20 = #{column20},
+			column21 = #{column21},
+			column22 = #{column22},
+			column23 = #{column23},
+			column24 = #{column24},
+			column25 = #{column25},
+			column26 = #{column26},
+			column27 = #{column27},
+			column28 = #{column28},
+			column29 = #{column29},
+			column30 = #{column30}
+		WHERE id = #{id}
+	</update>-->
+	
+	<update id="delete">
+		DELETE FROM t_bz_code
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

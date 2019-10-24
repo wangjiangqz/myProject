@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.modules.workflow.dao.TBaActivityDao">
+    
+	<sql id="tBaActivityColumns">
+		a.id AS "id",
+		a.temp_activity_id AS "tempActivityId",
+		a.apply_code AS "applyCode",
+		a.apply_state AS "applyState",
+		a.apply_id AS "applyId",
+		a.status AS "status",
+		a.review_advice AS "reviewAdvice",
+		a.company_id AS "company.id",
+		a.org_name AS "orgName",
+		a.user_id AS "user.id",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.del_flag AS "delFlag",
+		a.remarks AS "remarks",
+		a.activity_name as "activityName",
+		o9.name AS "company.name",
+		u11.name AS "user.name",
+		TERMINATION_STATE terminationState,
+		TERMINATION_REASON terminationReason
+	</sql>
+	
+	<sql id="tBaActivityJoins">
+		LEFT JOIN sys_office o9 ON o9.id = a.company_id
+		LEFT JOIN sys_user u11 ON u11.id = a.user_id
+	</sql>
+    
+	<select id="get" resultType="TBaActivity">
+		SELECT 
+			<include refid="tBaActivityColumns"/>
+		FROM t_ba_activity a
+		<include refid="tBaActivityJoins"/>
+		WHERE a.id = #{id}
+	
+	</select>
+	
+    <select id="getByTBaActivity" resultType="TBaActivity">
+		SELECT 
+			<include refid="tBaActivityColumns"/>
+		FROM t_ba_activity a
+		<include refid="tBaActivityJoins"/>
+		WHERE a.del_flag != '1'
+		<if test="applyId != null and applyId != ''">
+		   AND a.apply_id = #{applyId}
+		</if>
+		<if test="applyCode != null and applyCode != ''">
+		   AND a.apply_code= #{applyCode}
+		</if>
+	</select>
+
+
+	<select id="getTerminationActivity" resultType="TBaActivity" parameterType="java.lang.String">
+		SELECT
+		<include refid="tBaActivityColumns"/>
+		FROM t_ba_activity a
+		<include refid="tBaActivityJoins"/>
+		 left join T_BA_TEMP_ACTIVITY b on   a.TEMP_ACTIVITY_ID=b.id
+		WHERE a.del_flag != '1' AND b.LOGO!='ZZSQ'
+			AND a.apply_id = #{applyId}
+
+	</select>
+		
+	<select id="findList" resultType="TBaActivity">
+		SELECT 
+			<include refid="tBaActivityColumns"/>
+		FROM t_ba_activity a
+		<include refid="tBaActivityJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TBaActivity">
+		SELECT 
+			<include refid="tBaActivityColumns"/>
+		FROM t_ba_activity a
+		<include refid="tBaActivityJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO t_ba_activity(
+			id,
+			temp_activity_id,
+			apply_code,
+			apply_state,
+			apply_id,
+			status,
+			review_advice,
+			company_id,
+			org_name,
+			user_id,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			del_flag,
+			remarks,
+			activity_name,
+			TERMINATION_STATE,TERMINATION_REASON
+		) VALUES (
+			#{id},
+			#{tempActivityId},
+			getApplyCode(),
+			#{applyState},
+			#{applyId},
+			#{status},
+			#{reviewAdvice},
+			#{company.id},
+			#{user.name},
+			#{user.id},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{delFlag},
+			#{remarks},
+			#{activityName},
+			#{terminationState},
+			#{terminationReason}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE t_ba_activity SET 	
+			temp_activity_id = #{tempActivityId},
+			apply_state = #{applyState},
+			status = #{status},
+			review_advice = #{reviewAdvice},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			activity_name=#{activityName},
+			TERMINATION_STATE = #{terminationState},
+			TERMINATION_REASON = #{terminationReason}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE t_ba_activity SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+	<select id="countTBaActivity" resultType="TBaActivity">
+        SELECT 
+            <include refid="tBaActivityColumns"/>
+        FROM t_ba_activity a
+        <include refid="tBaActivityJoins"/>
+        <where>
+            a.del_flag = '0'
+            AND a.temp_activity_id = #{tempActivityId}
+        </where>
+    </select>
+   
+    <select id="queryActivityIdByAbilityId" resultType="TBaActivity">
+        SELECT 
+           a.id               AS "id",
+       a.temp_activity_id AS "tempActivityId",
+       a.apply_code       AS "applyCode",
+       a.apply_state      AS "applyState",
+       a.apply_id         AS "applyId",
+       a.status           AS "status",
+       a.review_advice    AS "reviewAdvice",
+       a.company_id       AS "company.id",
+       a.org_name         AS "orgName",
+       a.user_id          AS "user.id",
+       a.create_by        AS "createBy.id",
+       a.create_date      AS "createDate",
+       a.update_by        AS "updateBy.id",
+       a.update_date      AS "updateDate",
+       a.del_flag         AS "delFlag",
+       a.remarks          AS "remarks",
+       a.activity_name    as "activityName"
+        FROM t_ba_activity a
+        <where>
+            a.apply_id = #{Id}
+        </where>
+    </select>
+    
+    <select id="queryOpinionContentIdByActivityId" resultType="TBaTask">
+       SELECT a.id              AS "id",
+              a.note_id         AS "noteId",
+              a.activity_id     AS "activityId",
+              a.note_name       AS "noteName",
+              a.dual_opinion    AS "dualOpinion",
+              a.opinion_content AS "opinionContent",
+              a.update_name     AS "updateName",
+              a.create_name     AS "createName",
+              a.create_by       AS "createBy",
+              a.create_date     AS "createDate",
+              a.update_by       AS "updateBy",
+              a.update_date     AS "updateDate",
+              a.status          AS "status",
+              a.dual_type       AS "dualType",
+              a.last_task_id    AS "lastTaskId"
+         FROM ( SELECT a.*
+                  FROM t_ba_task a, t_ba_note an, t_ba_temp_note tn
+                 WHERE a.activity_id = #{Id}
+                   and tn.id in ('0d9de3d7819248869f3519cb1aa4fb9f','5db0eaee35ab40d29ab270fcee904a4b')
+                   and a.note_id = an.id
+                   and an.temp_note_id = tn.id
+                 order by a.update_date desc) a
+        where rownum &lt;=1
+    </select>
+    
+    <select id="queryActivity" resultType="TBaActivity">
+    	    select * from TBaActivity a where a.id=#{0};
+    </select>
+    
+    <select id="queryByCnas" resultType="TBaActivity">
+	select t002.id               as id,
+	         t002.temp_activity_id as tempActivityId,
+	         t002.apply_code       as applyCode,
+	         t002.apply_state      as applyState,
+	         t002.apply_id         as applyId,
+	         t002.status           as status,
+	         t002.review_advice    as reviewAdvice,
+	         t002.org_name         as orgName,
+	         t002.activity_name    as activityName
+	        from t_ba_activity t002
+	       where t002.apply_code in
+	             (select t001.cma_apply_code
+	              from t_in_cnas_cert t001
+	             where substr(t001.create_date,1,10) = to_char(sysdate, 'yyyy-MM-dd')
+	             and t001.del_flag !='1' or t001.del_flag is null
+	             )
+    </select>
+    
+    <select id="cmaRetractFlowNode" statementType="CALLABLE" resultType="String">
+		<![CDATA[  
+ 			{call cmaRetractFlowNode
+ 				(
+ 					#{in_activity_id,mode=IN,jdbcType=VARCHAR},
+ 					#{out_result,mode=OUT,jdbcType=VARCHAR}
+ 				)
+ 		    }  
+		]]>  
+	</select>
+	
+	<select id="cnasRetractFlowNode" statementType="CALLABLE" resultType="String">
+		<![CDATA[  
+ 			{call cnasRetractFlowNode
+ 				(
+ 					#{in_activity_id,mode=IN,jdbcType=VARCHAR},
+ 					#{out_result,mode=OUT,jdbcType=VARCHAR}
+ 				)
+ 		    }  
+		]]>  
+	</select>
+	
+</mapper>
