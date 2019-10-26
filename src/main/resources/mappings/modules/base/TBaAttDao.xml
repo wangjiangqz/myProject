@@ -26,7 +26,7 @@
 	<sql id="tBaAttJoins">
 		LEFT JOIN sys_office o3 ON o3.id = a.office_id
 		LEFT JOIN sys_dict o4 ON o4.id = a.type
-		LEFT JOIN t_ba_file O5 ON o5.id = a.file_id
+		LEFT JOIN t_ba_file o5 ON o5.id = a.file_id
 	</sql>
     
 	<select id="get" resultType="TBaAtt">
